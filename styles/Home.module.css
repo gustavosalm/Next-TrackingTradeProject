@@ -1,0 +1,20 @@
+.container {
+    background-color: #f4f4f7;
+    display: flex;
+}
+
+.sideMenu {
+    background-color: #2a3042;
+    width: 4%;
+    height: 100vh;
+}
+
+.main {
+    height: 100vh;
+}
+
+.topBar {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
