@@ -6,15 +6,32 @@
 .sideMenu {
     background-color: #2a3042;
     width: 4%;
+    transition: width .5s;
     height: 100vh;
 }
 
 .main {
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .topBar {
     height: 50px;
     width: 100%;
     background-color: white;
+}
+
+.productContainer {
+    width: 30%;
+    padding: 10px;
+}
+
+.chartCard {
+    background-color: white;
+    width: 350px;
+    height: auto;
+    overflow-y: clip;
+    overflow-x: scroll;
 }
