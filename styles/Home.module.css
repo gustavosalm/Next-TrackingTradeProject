@@ -23,15 +23,14 @@
     background-color: white;
 }
 
-.productContainer {
-    width: 30%;
-    padding: 10px;
-}
-
 .chartCard {
     background-color: white;
     width: 350px;
     height: auto;
     overflow-y: clip;
     overflow-x: scroll;
+}
+
+.col-md {
+    overflow: hidden;
 }
