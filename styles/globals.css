@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.no-padding >*:not([class~="pad"]){
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
