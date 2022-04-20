@@ -3,10 +3,12 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 import Chart from '../Components/Chart/Chart'
 import Product from '../Components/Product'
-
-import { Container, Col, Row } from 'react-bootstrap'
 import MarketplaceList from '../Components/MarketplaceList'
 import SideMenu from '../Components/SideMenu'
+
+import { Container, Col, Row } from 'react-bootstrap'
+import { GoThreeBars as HamButton } from 'react-icons/go';
+import { BiSearchAlt as Search, BiFullscreen } from 'react-icons/bi';
 
 type props = {
   market: string,
@@ -55,7 +57,11 @@ const Home: NextPage = () => {
       <SideMenu {...{active: active}}/>
       <main className={styles.main}>
         <div className={styles.topBar}>
-          <button onClick={() => setActive(!active)}></button>
+          <button onClick={() => setActive(!active)}><HamButton size={18} style={{color: "#454c60"}}/></button>
+          <div className={styles.searchBar}>
+            <Search />
+            <input></input>
+          </div>
         </div>
         <Container fluid className="pt-3 pb-4 h-100">
           <Row className="h-100">

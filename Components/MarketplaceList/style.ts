@@ -4,6 +4,17 @@ export const MarketplaceListStyle = styled.div`
     height: 75%;
     background-color: white;
     padding: 1rem .7rem 0 .7rem;
+    .react-datepicker-wrapper {
+        input {
+            min-width: 0;
+            width: 80px;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            color: inherit;
+            line-height: 1.6875rem;
+        }
+    }
     >div:not(:first-child) {
         position: relative;
         display: flex;

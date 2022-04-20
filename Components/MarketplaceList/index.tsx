@@ -1,6 +1,10 @@
 import { MarketplaceListStyle, RRPText } from './style';
+import { useState } from 'react';
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { Row, Col, Button } from 'react-bootstrap';
+import { IoIosArrowDown as BtArrow } from 'react-icons/io'
 
 type props = {
     market: string,
@@ -17,6 +21,8 @@ type props = {
 }
 
 const MarketplaceList = (list: props[]) => {
+    const [startDate, setStartDate] = useState(new Date());
+    
     return(
         <MarketplaceListStyle>
             <Row className="mx-auto mb-3 align-items-center no-padding">
@@ -25,11 +31,13 @@ const MarketplaceList = (list: props[]) => {
                 </Col>
                 <Col className="col-md-3">
                     <p className="mb-1">Date</p>
-                    <Button className="btn-sm">2022-01-06</Button>
+                    <Button className="btn-sm py-0 px-1">
+                        <DatePicker selected={startDate} onChange={(date: Date) => setStartDate(date)} />
+                    </Button>
                 </Col>
                 <Col className="col-md-3 pad">
                     <p className="mb-1">Price</p>
-                    <Button className="btn-sm w-100">Mode V</Button>
+                    <Button className="btn-sm w-100">Mode <BtArrow size={10}/></Button>
                 </Col>
             </Row>
             <div>
