@@ -24,10 +24,13 @@ const state = {
   options : { 
     chart: {
       stacked: true,
-      height: 250,
+      height: 300,
       innerWidth: 600,
+      // offsetY: -50,
+      parentHeightOffset: 0,
       toolbar: {
         offsetX: 0,
+        offsetY: 0,
         show: true,
         tools: {
           download: true,
@@ -54,11 +57,25 @@ const state = {
         }    
       }
     },
+    grid: {
+      padding: {
+        top: -20,
+        left: 0,
+      }
+    },
     stroke: {
       width: [0, 4]
     },
     title: {
-      text: 'Traffic Sources'
+      text: 'Price',
+      offsetX: 25,
+    },
+    subtitle: {
+      text: 'Spot Price',
+      align: 'left',
+      margin: 10,
+      offsetX: 25,
+      offsetY: 15,
     },
     dataLabels: {
       enabled: true,
@@ -68,24 +85,20 @@ const state = {
       "0:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
     ],
     yaxis: [{
-      title: {
-        text: 'Website Blog',
-      },
+      show: false
     }, {
-      opposite: true,
-      title: {
-        text: 'Social Media'
-      }
+      show: false
     }],
-    // xaxis: {
-    //   range: 4
-    // },
+    legend: {
+      position: 'left',
+      offsetY: 20,
+    }
   }
 }
 
 const Chart = () => {
   return (
-    <ApexCharts options={state.options} series={state.series} type="area" height={250} width={600} />
+    <ApexCharts options={state.options} series={state.series} type="area" height={200} width={600} />
   );
 }
 

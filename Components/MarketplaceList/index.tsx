@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import { IoIosArrowDown as BtArrow } from 'react-icons/io'
+import { AiOutlineQuestionCircle as QuestMark } from 'react-icons/ai';
 
 type props = {
     market: string,
@@ -22,12 +23,13 @@ type props = {
 
 const MarketplaceList = (list: props[]) => {
     const [startDate, setStartDate] = useState(new Date());
+    const [mode, setMode] = useState('Mode');
     
     return(
         <MarketplaceListStyle>
             <Row className="mx-auto mb-3 align-items-center no-padding">
                 <Col className="col-md-6">
-                    <p className="mb-0"><strong>Offer</strong></p>
+                    <p className="mb-0"><strong>Offer</strong> <QuestMark size={12} style={{color: "black", margin: " 0 0 5px 0"}}/></p>
                 </Col>
                 <Col className="col-md-3">
                     <p className="mb-1">Date</p>
@@ -37,7 +39,17 @@ const MarketplaceList = (list: props[]) => {
                 </Col>
                 <Col className="col-md-3 pad">
                     <p className="mb-1">Price</p>
-                    <Button className="btn-sm w-100">Mode <BtArrow size={10}/></Button>
+                    <Dropdown drop="down" align='start' onSelect={(key) => {(key != null) ? setMode(key) : setMode('Mode') }}>
+                        <Dropdown.Toggle className="btn-sm w-100" variant="primary" id="dropdown-basic">
+                            {mode} <BtArrow size={10} style={{color: "white"}}/>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item eventKey="Mode">Mode</Dropdown.Item>
+                            <Dropdown.Item eventKey="Minimum">Minimum</Dropdown.Item>
+                            <Dropdown.Item eventKey="Maximum">Maximum</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                    {/* <Button className="btn-sm w-100">Mode <BtArrow size={10}/></Button> */}
                 </Col>
             </Row>
             <div>

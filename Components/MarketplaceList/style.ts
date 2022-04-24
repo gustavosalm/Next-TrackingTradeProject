@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const MarketplaceListStyle = styled.div`
     height: 75%;
     background-color: white;
-    padding: 1rem .7rem 0 .7rem;
+    padding: 0.6rem .7rem 0 .7rem;
+    border-radius: 5px;
+    overflow-x:visible; overflow-y:clip;
     .react-datepicker-wrapper {
         input {
             min-width: 0;
@@ -12,8 +14,17 @@ export const MarketplaceListStyle = styled.div`
             cursor: pointer;
             border: none;
             color: inherit;
+            font-size: 0.8rem;
             line-height: 1.6875rem;
+            text-align: center;
         }
+    }
+    .dropdown button {
+        padding: 0.3125rem 0;
+        font-size: 0.8rem;
+    }
+    .dropdown-toggle::after {
+        content: none;
     }
     >div:not(:first-child) {
         position: relative;
@@ -44,6 +55,6 @@ export const MarketplaceListStyle = styled.div`
 `
 
 export const RRPText = styled.p<{opacity: number}>`
-    background-color: ${props => `rgb(255, 0, 0, ${props.opacity})`};
+    background-color: ${props => `rgb(255, 74, 74, ${props.opacity})`};
     border-radius: 3px;
 `

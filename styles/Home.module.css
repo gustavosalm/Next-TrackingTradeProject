@@ -23,6 +23,12 @@
     background-color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.topBar >div {
+    height: 100%;
+    display: flex;
+    align-items: inherit;
 }
 .topBar button {
     padding: 0;
@@ -49,10 +55,30 @@
 .searchBar input {
     background: transparent;
     border: none;
-    padding: 0 5px 3px 10px;
+    padding: 0 10px;
+    /* padding: 0 5px 3px 10px; */
 }
 .searchBar input:focus {
     outline: none !important;
+}
+
+.userOptions {
+    padding-right: 1rem;
+    display: flex;
+    align-items: inherit;
+    margin-left: 1.2rem;
+    cursor: pointer;
+}
+.userOptions div {
+    width: 30px;
+    height: 30px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+.userOptions p {
+    margin: 0;
+    margin-right: 0.5rem;
 }
 
 .chartCard {
