@@ -66,7 +66,9 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div>
-            <button onClick={() => console.log('activate fullscreen')}><BiFullscreen size={18} /></button>
+            <button onClick={() => (document.fullscreenElement) ? document.exitFullscreen() : document.documentElement.requestFullscreen()}>
+              <BiFullscreen size={18} />
+            </button>
             <div className={styles.userOptions} onClick={() => console.log('activate logout option')}>
               <div></div>
               <p>nome</p>
@@ -74,13 +76,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <Container fluid className="pt-3 pb-4 h-100">
+        <Container fluid className="pt-3 pb-4 h-100 mainContainer">
           <Row className="h-100">
-            <Col md className="overflow-y-hidden"> {/* min-vw-25 */}
+            <Col md className="col-md-4 overflow-y-hidden"> {/* overflow-y-hidden */}
               <Product />
               <MarketplaceList {...data} />
             </Col>
-            <Col md className="col-md-8 overflow-y-hidden" fluid>
+            <Col md className="col-md-8 mt-md-0 mt-3" fluid>
               <ChartList />
             </Col>
           </Row>

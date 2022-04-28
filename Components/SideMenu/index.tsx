@@ -8,8 +8,13 @@ type Props = {
 const SideMenu = ({active} : Props) => {
 
     return (
-        <Menu width={ active ? '16%' : '4%'}>
-            <HomeIcon style={{color: "white"}}/>
+        <Menu props={active ? {width: '14rem', svgPosition: 'top: 5.3rem; left: 2rem;', opacity: 1} : 
+                    {width: '3.5rem', svgPosition: 'top: 1.5rem; left: 1.75rem;', opacity: 0}}>
+            <HomeIcon size={20} style={{color: "white"}}/>
+            <div>
+                <h6>MENU</h6>
+                <p>Dashboard</p>
+            </div>
         </Menu>
     )
 }

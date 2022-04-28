@@ -4,7 +4,7 @@ export const ProductStyle = styled.div`
     background-color: rgb(35, 96, 195);
     position: relative;
     border-radius: 5px;
-    height: 150px;
+    height: 10rem;
     margin-bottom: 1rem;
     overflow: hidden;
     padding: 5px 8px;

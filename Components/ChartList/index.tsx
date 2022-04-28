@@ -39,7 +39,23 @@ const ChartList = () => {
                 </div>
             </FiltersContainer>
             <ChartsContainer>
-                <Container fluid className="px-0">
+                <Container fluid className="px-0 w-100">
+                    <Row className="pb-3">
+                        <Col className="col-md-6">
+                            <div>
+                                <div>
+                                    <Chart />
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="col-md-6">
+                            <div>
+                                <div>
+                                    <Chart />
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col className="col-md-6">
                             <div>

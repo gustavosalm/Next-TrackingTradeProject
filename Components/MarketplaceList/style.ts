@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const MarketplaceListStyle = styled.div`
-    height: 75%;
+    height: calc(100% - 10rem);
     background-color: white;
     padding: 0.6rem .7rem 0 .7rem;
     border-radius: 5px;
-    overflow-x:visible; overflow-y:clip;
+    overflow-x: visible;
     .react-datepicker-wrapper {
         input {
             min-width: 0;

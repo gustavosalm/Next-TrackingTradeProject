@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const FiltersContainer = styled.div`
     height: auto;
+    width: 100%;
     background-color: white;
     padding: 0.6rem 1rem 1rem 1rem;
     margin-bottom: 1rem;
@@ -66,4 +67,9 @@ export const ChartsContainer = styled.div`
             left: 3px;
         }
     }
+    /* .container-fluid {
+        max-height: 68.5vh;
+        overflow-y: scroll;
+        overflow-x: clip;
+    } */
 `
