@@ -56,6 +56,22 @@ const ChartList = () => {
                             </div>
                         </Col>
                     </Row>
+                    <Row className="pb-3">
+                        <Col className="col-md-6">
+                            <div>
+                                <div>
+                                    <Chart />
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="col-md-6">
+                            <div>
+                                <div>
+                                    <Chart />
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col className="col-md-6">
                             <div>

@@ -6,9 +6,9 @@ import Product from '../Components/Product'
 import MarketplaceList from '../Components/MarketplaceList'
 import SideMenu from '../Components/SideMenu'
 
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Dropdown } from 'react-bootstrap'
 import { GoThreeBars as HamButton } from 'react-icons/go';
-import { BiSearchAlt as Search, BiFullscreen } from 'react-icons/bi';
+import { BiSearchAlt as Search, BiFullscreen, BiPowerOff } from 'react-icons/bi';
 import { IoIosArrowDown as BtArrow } from 'react-icons/io';
 
 type props = {
@@ -66,13 +66,21 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div>
-            <button onClick={() => (document.fullscreenElement) ? document.exitFullscreen() : document.documentElement.requestFullscreen()}>
+            <button className="pb-0" onClick={() => (document.fullscreenElement) ? document.exitFullscreen() : document.documentElement.requestFullscreen()}>
               <BiFullscreen size={18} />
             </button>
-            <div className={styles.userOptions} onClick={() => console.log('activate logout option')}>
+            <div className={styles.userOptions}>
               <div></div>
-              <p>nome</p>
-              <BtArrow size={12}/>
+              <Dropdown className="align-end" onSelect={(key) => console.log('logout')}>
+                <Dropdown.Toggle className="btn-sm w-100 no-hover" variant="primary" id="dropdown-basic">
+                  <span className="text-dark">nome</span> <BtArrow size={12} color="black"/>
+                  </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item eventKey="Logout">
+                    <BiPowerOff color="#df3e4c"/> Logout
+                    </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
         </div>

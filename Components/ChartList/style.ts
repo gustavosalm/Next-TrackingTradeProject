@@ -32,6 +32,19 @@ export const FiltersContainer = styled.div`
             padding-bottom: 0;
         }
     }
+    .react-datepicker-popper {
+        z-index: 12;
+        .react-datepicker__header {
+            background-color: #2b72e8;
+            * {
+                color: white;
+            }
+        }
+        .react-datepicker__day--selected {
+            background-color: #2b72e8;
+            border-radius: 50%;
+        }
+    }
 `
 
 export const ChartsContainer = styled.div`

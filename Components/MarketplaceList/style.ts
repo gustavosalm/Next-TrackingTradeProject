@@ -19,6 +19,18 @@ export const MarketplaceListStyle = styled.div`
             text-align: center;
         }
     }
+    .react-datepicker {
+        .react-datepicker__header {
+            background-color: #2b72e8;
+            * {
+                color: white;
+            }
+        }
+        .react-datepicker__day--selected {
+            background-color: #2b72e8;
+            border-radius: 50%;
+        }
+    }
     .dropdown button {
         padding: 0.3125rem 0;
         font-size: 0.8rem;

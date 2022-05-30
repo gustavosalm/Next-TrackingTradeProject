@@ -42,3 +42,25 @@ a {
   outline: 1px solid rgb(106, 109, 131, .5);
   border-radius: 10px;
 }
+
+.btn-primary.no-hover:not([disabled]):not(.disabled).active,
+.btn-primary.no-hover:not([disabled]):not(.disabled):active,
+.btn-primary.no-hover:not([disabled]):not(.disabled).hover,
+.btn-primary.no-hover:not([disabled]):not(.disabled):hover,
+.btn-primary.no-hover.dropdown-toggle{
+    color: black !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.btn-primary.no-hover::after {
+  opacity: 0;
+  width: 0;
+  border: none;
+}
+
+.dropdown.align-end .dropdown-menu {
+  transform: none !important;
+  right: -5px !important;
+  top: 2.5rem !important;
+}

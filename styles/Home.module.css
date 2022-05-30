@@ -71,17 +71,21 @@
     padding-right: 1rem;
     display: flex;
     align-items: inherit;
-    margin-left: 1.2rem;
+    margin-left: 0.5rem;
     cursor: pointer;
 }
-.userOptions div {
-    width: 30px;
-    height: 30px;
+.userOptions >div:first-child {
+    width: 2rem;
+    height: 2rem;
     background-color: #0d6efd;
     border-radius: 50%;
     margin-right: 0.7rem;
 }
-.userOptions p {
+.userOptions button {
     margin: 0;
     margin-right: 0.5rem;
+    padding-bottom: 0;
+}
+#dropdown-basic span {
+    color: black !important;
 }
