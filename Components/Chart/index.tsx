@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
+import { ChartContainer } from './style';
+import { AiOutlineQuestionCircle as QuestMark } from 'react-icons/ai';
 
 const state = {
   series : [{
@@ -68,13 +70,13 @@ const state = {
     },
     title: {
       text: 'Price',
-      offsetX: 25,
+      offsetX: 45,
     },
     subtitle: {
       text: 'Spot Price',
       align: 'left',
       margin: 10,
-      offsetX: 25,
+      offsetX: 45,
       offsetY: 15,
     },
     dataLabels: {
@@ -98,7 +100,11 @@ const state = {
 
 const Chart = () => {
   return (
-    <ApexCharts options={state.options} series={state.series} type="area" height={200} width={600} />
+    <ChartContainer>
+      <ApexCharts options={state.options} series={state.series} type="area" height={200} width={600} />
+      <QuestMark className="tooltipIcon" color='#7a8a9a' size={16} />
+      <div className="tooltip">Tooltip Text</div>
+    </ChartContainer>
   );
 }
 

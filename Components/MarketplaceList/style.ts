@@ -64,6 +64,17 @@ export const MarketplaceListStyle = styled.div`
             background-color: rgb(243, 244, 247);
         }
     }
+    svg.tooltipIcon:hover +div {
+        opacity: 0.8;
+    }
+    svg.tooltipIcon +div.tooltip {
+        background-color: #c4c4c4;
+        border-radius: 0.3rem;
+        top: 1.5rem;
+        /* width: 50%; */
+        padding: 0 .5rem;
+        text-align: center;
+    }
 `
 
 export const RRPText = styled.p<{opacity: number}>`

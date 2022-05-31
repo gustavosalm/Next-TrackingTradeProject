@@ -33,7 +33,7 @@ export const FiltersContainer = styled.div`
         }
     }
     .react-datepicker-popper {
-        z-index: 12;
+        z-index: 13;
         .react-datepicker__header {
             background-color: #2b72e8;
             * {
@@ -53,14 +53,12 @@ export const ChartsContainer = styled.div`
     width: 100%;
     .col {
         overflow: hidden;
-        /* &:first-child {
-            padding-left: 0 !important;
-        } */
         >div {
             background-color: white;
             border-radius: 5px;
             padding: 1rem;
             >div{
+                position: relative;
                 width: 100%;
                 overflow-x: scroll;
                 overflow-y: clip;
@@ -80,9 +78,4 @@ export const ChartsContainer = styled.div`
             left: 3px;
         }
     }
-    /* .container-fluid {
-        max-height: 68.5vh;
-        overflow-y: scroll;
-        overflow-x: clip;
-    } */
 `

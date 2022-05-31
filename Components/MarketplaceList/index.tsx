@@ -28,8 +28,10 @@ const MarketplaceList = (list: props[]) => {
     return(
         <MarketplaceListStyle>
             <Row className="mx-auto mb-3 align-items-center no-padding">
-                <Col className="col-md-6">
-                    <p className="mb-0"><strong>Offer</strong> <QuestMark size={12} style={{color: "black", margin: " 0 0 5px 0"}}/></p>
+                <Col className="col-md-6 d-flex align-items-center position-relative">
+                    <p className="mb-0"><strong>Offer</strong></p>
+                    <QuestMark className="tooltipIcon" size={12} style={{color: "black", margin: " 0 0 5px 5px"}}/>
+                    <div className="tooltip">Tooltip Text</div>
                 </Col>
                 <Col className="col-md-3">
                     <p className="mb-1">Date</p>

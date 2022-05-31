@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import { Container, Row, Col, ButtonGroup, Button, ToggleButton } from 'react-bootstrap';
 import Chart from '../Chart';
 
+import { AiOutlineQuestionCircle as QuestMark } from 'react-icons/ai';
+
 const ChartList = () => {
     const [date, setDate] = useState(new Date());
     const [period, setPeriod] = useState(0);
